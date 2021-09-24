@@ -1,13 +1,11 @@
-// title
-
 # Vacationly 
 
-connects to https://holidays.abstractapi.com 
+## connects to https://holidays.abstractapi.com 
 
-As remote work continues and companies are growing globally this is a tool a that will help not just HR professionals but employees in general in terms of collaboration as it allows you to see holidays that are happening on any given day
+## As remote work continues and companies are growing globally this is a tool a that will help not just HR professionals but employees in general in terms of collaboration as it allows you to see holidays that are happening on any given day
 
 
-// tech used
+# Technology USED
 ## HTML 
 ## CSS
 ## JavaScript
@@ -17,9 +15,9 @@ As remote work continues and companies are growing globally this is a tool a tha
 // screenshots
 
 
-// getting started 
+### Getting Started
 
-link to deployed???? 
+ ### link to deployed???? 
 
 # Future Enhancements
 
@@ -28,5 +26,3 @@ link to deployed????
 ## Be able to search through country name not just country code
 
 ## The ability to save and favorite locations
-
-author section???
