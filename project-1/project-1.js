@@ -13,12 +13,17 @@ const $day = $('#day');
 const $month = $('#month');
 // selecting the element for year
 const $year = $('#year');
+// selecting the element for input site search
+const $searchSite = $('#siteCountrySearch')
+
+
 
 
 // step 1 is always select the dom element first
 const $form = $('form'); 
 const $button = $('submit');
 const $holidayList = $('#holidays');
+const $searchBtn = $('submit'); 
 
 
 // then you attach an event listener
@@ -51,7 +56,46 @@ function render() {
      $holidayList.append(`<li>Country: ${holidayData[i].country}</li>`);
      $holidayList.append(`<li>Holiday name: ${holidayData[i].name}</li>`);
      $holidayList.append(`<li>Holiday Type: ${holidayData[i].type}</li>`);
-      console.log($holidayList.html())
+     console.log($holidayList.html())
   }
 
 }
+
+// Variables and Constants
+base_url = 'https://holidays.abstractapi.com/v1/';
+api_key = '3e9f7a9fdbfe4adda2318bdf3f611928';
+
+
+let countryData;
+
+// Cached Element References
+// selecting the element for country input site search
+const $country = $('searchInput');
+// selecting the element for input site search
+const $searchInput = $('#siteSearch')
+
+
+
+$siteSearchForm.on('search', handleData);
+
+function handleCountryData(evt) {
+evt.preventDefault();
+
+let siteSearch = $country.val();
+const $searchInput = $('#siteSearch');
+$.ajax(`${base_url}?api_key=${api_key}&country=${searchInput}&year=${chosenYear}&month=${chosenMonth}&day=${chosenDay}`).then(function(data) {
+
+
+// console.log(evt, data);
+// console.log(evt, data);
+// console.log(data);
+countryData = data;
+render();
+}, function(error){
+console.log()
+console.log(error);
+});
+
+}
+
+// &month=${chosenMonth}&day=${chosenDay}
